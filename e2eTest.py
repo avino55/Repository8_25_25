@@ -1,0 +1,26 @@
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+
+driver = webdriver.Firefox()
+driver.implicitly_wait(5)
+
+driver.get("https://rahulshettyacademy.com/angularpractice/")
+
+driver.find_element(By.CSS_SELECTOR,"a[href*='shop']").click()
+
+products = driver.find_elements(By.XPATH,"//div[@class='card h-100']")
+print("I am in the file")
+for product in products:
+        product_name = product.find_element(By.XPATH,"div/h4/a").text
+        print(product_name)
+        if product_name == "Blackberry":
+            print("I am here")
+            product.find_element(By.XPATH,"div/button").click()
+
+
+time.sleep(2)
+
+driver.close()
