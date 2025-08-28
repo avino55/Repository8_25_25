@@ -21,6 +21,7 @@ for product in products:
             product.find_element(By.XPATH,"div/button").click()
 
 print("Update for Repository_25")
+print("Second commit on Repository_25")
 time.sleep(2)
 
 driver.close()
