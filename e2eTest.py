@@ -22,6 +22,7 @@ for product in products:
 
 print("Update for Repository_25")
 print("Second commit on Repository_25")
+print("This change made in GitStart to be transferred to Repository_25")
 time.sleep(2)
 
 driver.close()
